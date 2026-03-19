@@ -17,5 +17,6 @@ public:
 	void	addNumber(int to_add);
 	int		shortestSpan();
 	int		longestSpan();
+	void	addVector(std::vector<int> to_add);
 };
 

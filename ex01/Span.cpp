@@ -36,3 +36,10 @@ int		Span::longestSpan()
 	std::sort(_span.begin(), _span.end());
 	return (abs(_span.front() - _span.back()));
 }
+
+void	Span::addVector(std::vector<int> to_add)
+{
+	if (to_add.size() + _span.size() > N)
+		throw std::out_of_range("The span will overflow");
+	_span.insert(_span.end(), to_add.begin(), to_add.end());
+}
